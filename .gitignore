@@ -32,7 +32,6 @@ war/WEB-INF/classes/
 war/sitemap.xml
 war/robots.txt
 war/WEB-INF/appengine-generated
-war/WEB-INF/lib
 war/WEB-INF/appengine-web.xml
 
 #compilation logs
