@@ -5,6 +5,8 @@ import com.hello.client.activities.contact.ContactActivity;
 import com.hello.client.activities.contact.ContactPlace;
 import com.hello.client.activities.home.HomeActivity;
 import com.hello.client.activities.home.HomePlace;
+import com.hello.client.others.ActivityCallbackHandler;
+import com.hello.client.others.AsyncActivityMapper;
 
 
 public class NormalAppActivityMapper implements AsyncActivityMapper {

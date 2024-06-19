@@ -1,4 +1,4 @@
-package com.hello.client.activities;
+package com.hello.client.others;
 
 import com.google.gwt.place.shared.Place;
 

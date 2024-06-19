@@ -7,13 +7,13 @@ import com.google.gwt.place.shared.PlaceHistoryMapper;
 import com.google.gwt.user.client.ui.RootPanel;
 import com.google.gwt.user.client.ui.SimplePanel;
 import com.hello.client.activities.AppPlaceHistoryMapper;
-import com.hello.client.activities.AsyncActivityManager;
-import com.hello.client.activities.AsyncActivityMapper;
 import com.hello.client.activities.ClientFactory;
 import com.hello.client.activities.ClientFactoryImpl;
-import com.hello.client.activities.MyPlaceHistoryMapper;
 import com.hello.client.activities.NormalAppActivityMapper;
 import com.hello.client.activities.home.HomePlace;
+import com.hello.client.others.AsyncActivityManager;
+import com.hello.client.others.AsyncActivityMapper;
+import com.hello.client.others.MyPlaceHistoryMapper;
 
 /**
  * Entry point classes define <code>onModuleLoad()</code>.
