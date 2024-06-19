@@ -4,11 +4,13 @@ import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.event.shared.EventBus;
 import com.google.gwt.place.shared.Place;
+import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.AcceptsOneWidget;
 import com.hello.client.activities.ClientFactory;
 import com.hello.client.activities.basic.BasicActivity;
 import com.hello.client.activities.home.HomePlace;
 import com.hello.client.events.ActionEvent;
+import com.hello.client.events.ActionEventHandler;
 import com.hello.client.events.ActionEvent.Action;
 import com.hello.shared.model.User;
 
@@ -45,11 +47,10 @@ public class ContactActivity extends BasicActivity {
 			}
 		}));
 		
-		addHandlerRegistration(view.getBtnEvent().addClickHandler(new  ClickHandler() {
-			
+		addHandlerRegistration(eventBus.addHandler(ActionEvent.TYPE, new ActionEventHandler() {
 			@Override
-			public void onClick(ClickEvent event) {
-				eventBus.fireEvent(new ActionEvent(Action.CLICK, user));
+			public void onEvent(ActionEvent event) {
+				Window.alert("Event : "  + event.getUser().getName());
 			}
 		}));
 	}

@@ -2,13 +2,10 @@ package com.hello.client.activities.basic;
 
 import com.google.gwt.event.shared.EventBus;
 import com.google.gwt.place.shared.Place;
-import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.AcceptsOneWidget;
 import com.googlecode.mgwt.mvp.client.MGWTAbstractActivity;
 import com.hello.client.AppManager;
 import com.hello.client.activities.ClientFactory;
-import com.hello.client.events.ActionEvent;
-import com.hello.client.events.ActionEventHandler;
 
 public class BasicActivity extends MGWTAbstractActivity {
 	
@@ -34,12 +31,7 @@ public class BasicActivity extends MGWTAbstractActivity {
 	}
 
 	protected void bind() {
-		addHandlerRegistration(eventBus.addHandler(ActionEvent.TYPE, new ActionEventHandler() {
-			@Override
-			public void onEvent(ActionEvent event) {
-				Window.alert("Event : "  + event.getUser().getName());
-			}
-		}));
+		
 	}
 	
 	public void loadData() {

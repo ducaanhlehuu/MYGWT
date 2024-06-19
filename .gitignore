@@ -49,3 +49,4 @@ www-test/
 /bin/
 target/
 /bin
+/test-classes/
