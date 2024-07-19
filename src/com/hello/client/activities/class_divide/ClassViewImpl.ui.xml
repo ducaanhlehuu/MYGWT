@@ -1,0 +1,29 @@
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+    xmlns:g="urn:import:com.google.gwt.user.client.ui"
+    xmlns:gwtbootstrap3="urn:import:org.gwtbootstrap3.client.ui">
+    <ui:style>
+        .paddingWidget {
+            margin: 10px;
+        }
+    </ui:style>
+    <g:HTMLPanel>
+        <div style="width: 500px; padding: 20px;margin-left:10px;">
+            <h3>Chọn chương trình đào tạo cần phân tổ lớp</h3>
+  			<g:HorizontalPanel>
+  				<g:CheckBox ui:field="selectAll" addStyleNames="{style.paddingWidget}">Chọn hết</g:CheckBox> 
+  				<g:CheckBox ui:field="deSelectAll" addStyleNames="{style.paddingWidget}">Bỏ chọn hết</g:CheckBox> 
+  			</g:HorizontalPanel>
+            <g:Grid ui:field="checkBoxPanel"></g:Grid> 
+            <g:CheckBox ui:field="resetOption" addStyleNames="{style.paddingWidget}"></g:CheckBox> 
+        </div>
+       <div style="padding:20px;margin:10px">
+	        <g:HTMLPanel ui:field="mainPanel"></g:HTMLPanel>
+	        <g:Button ui:field="confirmGenerate">Tạo lớp và tổ</g:Button>
+	        <g:Button ui:field="confirmSave">Chia sinh viên</g:Button>
+	         <g:HTMLPanel ui:field="resultPanel">
+	         	
+	         </g:HTMLPanel>
+	        
+        </div>
+    </g:HTMLPanel>
+</ui:UiBinder>

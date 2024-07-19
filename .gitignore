@@ -26,14 +26,6 @@ war/WEB-INF/.DS_Store
 # boilerplate generated classes #
 .apt_generated/
  
-# more caches and things from deploy #
-war/WEB-INF/deploy/
-war/WEB-INF/classes/
-war/sitemap.xml
-war/robots.txt
-war/WEB-INF/appengine-generated
-war/WEB-INF/appengine-web.xml
-
 #compilation logs
 .gwt/
  

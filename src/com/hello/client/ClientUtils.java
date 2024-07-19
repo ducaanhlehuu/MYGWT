@@ -6,4 +6,5 @@ public class ClientUtils {
 		$wnd.console.log(message);
 	}-*/;
 
+	
 }

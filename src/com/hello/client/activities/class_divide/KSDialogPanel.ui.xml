@@ -1,0 +1,36 @@
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:b="urn:import:org.gwtbootstrap3.client.ui" 
+		>
+	<ui:style>
+	/* Add CSS here. See the GWT docs on UI Binder for more details */
+		.modalHeader {
+			font-weight: bold;
+			font-size: 1.2em;
+			 padding: 8px 15px;
+			
+		}
+		
+		.modalBody {
+			font-size: 1em;
+			padding: 10px 5px 5px 5px;
+		}
+		
+		.modalFooter {
+			 padding: 5px 10px;
+		}
+	</ui:style>
+	<b:Modal ui:field="modal" closable="true" fade="true" hideOtherModals="true"  dataBackdrop="TRUE" dataKeyboard="true" b:id="myModal">
+	<!-- <b:Modal ui:field="modal" closable="true" b:id="myModal"> -->
+	  <b:ModalHeader addStyleNames="{style.modalHeader}" ui:field="modalHeaderPanel">
+	  	<g:HTML ui:field="modalHeaderHTML" ></g:HTML>
+	  </b:ModalHeader>
+	  <b:ModalBody addStyleNames="{style.modalBody}">
+	  	<g:FlowPanel ui:field="modalContentPanel" width="100%"></g:FlowPanel>
+	  </b:ModalBody>
+	  <b:ModalFooter addStyleNames="{style.modalFooter}" ui:field="modalFooterPanel">
+	    <b:Button type="PRIMARY" ui:field="confirmButton">Confirm</b:Button>
+	    <b:Button type="DANGER" ui:field="closeButton" dataDismiss="MODAL">Cancel</b:Button>
+	  </b:ModalFooter>
+	</b:Modal>
+</ui:UiBinder> 

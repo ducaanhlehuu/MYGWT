@@ -4,10 +4,11 @@ import com.google.gwt.place.shared.Place;
 import com.google.gwt.place.shared.PlaceHistoryMapper;
 import com.google.gwt.place.shared.WithTokenizers;
 import com.hello.client.ClientUtils;
+import com.hello.client.activities.class_divide.ClassPlace;
 import com.hello.client.activities.contact.ContactPlace;
-import com.hello.client.activities.home.HomePlace;
+import com.hello.client.activities.home.EditContactPlace;
 
-@WithTokenizers({HomePlace.Tokenizer.class, ContactPlace.Tokenizer.class })
+@WithTokenizers({EditContactPlace.Tokenizer.class, ContactPlace.Tokenizer.class })
 
 public class AppPlaceHistoryMapper implements PlaceHistoryMapper {
 	public static final String DELIMITER = "/";
@@ -35,8 +36,11 @@ public class AppPlaceHistoryMapper implements PlaceHistoryMapper {
 		Place nextPlace = null;
         if (tokenPlace.indexOf(PlaceToken.CONTACT) == 0) {
         	nextPlace = new ContactPlace();
-        } else {
-        	nextPlace = new HomePlace();
+        } else if (tokenPlace.indexOf(PlaceToken.ADD_EDIT) == 0) {
+        	nextPlace = new EditContactPlace();
+        }
+        else {
+        	nextPlace = new ClassPlace();
         }
         return nextPlace;
 	}
@@ -58,7 +62,7 @@ public class AppPlaceHistoryMapper implements PlaceHistoryMapper {
 	}
 	
 	private Place getDefaultPlace() {
-		return new HomePlace();
+		return new EditContactPlace();
 	}
 	
 	@Override
@@ -75,8 +79,11 @@ public class AppPlaceHistoryMapper implements PlaceHistoryMapper {
 		if (place != null && place instanceof ContactPlace) {
 			return ((ContactPlace)place).getToken();
 		}
+		if(place != null && place instanceof ClassPlace) {
+			return ((ClassPlace)place).getToken();
+		}
 		else {
-			return ((HomePlace)place).getToken();
+			return ((EditContactPlace)place).getToken();
 		}
 	}
 }
